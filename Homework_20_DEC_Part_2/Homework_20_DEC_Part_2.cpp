@@ -33,48 +33,84 @@
 //и в ответ показывает название этого дня(например, 6 – это суббота).
 //Решить с использованием if и switch.
 
-#include <iostream>
-#include <string.h>
-using namespace std;
-int main()
-{
-	int day;
-	cout << "Enter the number of the day of the week. Monday is 1 and Sunday is 7\n";
-	cin >> day;
-	day = ++day;
-	if (day == 1 || day == 8)
-	{
-		cout << "Sunday";
-	}
-	else if (day == 2) 
-	{
-		cout << "Monday";
-	}
-	else if (day == 3)
-	{
-		cout << "Teusday";
-	}
-		else if (day == 4)
-	{
-		cout << "Wednesday";
-	}
-	else if (day == 5)
-	{
-		cout << "Thursday";
-	}
-	else if (day == 6)
-	{
-		cout << "Friday";
-	}
-	else if (day == 7)
-	{
-		cout << "Saturday";
-	}
-	else
-	{
-		cout << "Try something right";
-	}
-}
+//#include <iostream>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	int day;
+//	cin >> day;
+//	switch (day)
+//	{
+//	case 1:
+//		cout << "Monday";
+//		break;
+//	case 2:
+//		cout << "Tuesday";
+//		break;
+//	case 3:
+//		cout << "Wednesday";
+//		break;
+//	case 4:
+//		cout << "Thursday";
+//		break;
+//	case 5:
+//		cout << "Friday";
+//		break;
+//	case 6:
+//		cout << "Saturday";
+//		break;
+//	case 7:
+//		cout << "Sunday";
+//		break;
+//	default:
+//		cout << "Try somethng right";
+//		break;
+//	}
+//}
+// 
+//#include <iostream>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	int day;
+//	cout << "Enter the number of the day of the week. Monday is 1 and Sunday is 7\n";
+//	cin >> day;
+//	day = ++day;
+//	if (day == 1 || day == 8)
+//	{
+//		cout << "Sunday";
+//	}
+//	else if (day == 2) 
+//	{
+//		cout << "Monday";
+//	}
+//	else if (day == 3)
+//	{
+//		cout << "Teusday";
+//	}
+//		else if (day == 4)
+//	{
+//		cout << "Wednesday";
+//	}
+//	else if (day == 5)
+//	{
+//		cout << "Thursday";
+//	}
+//	else if (day == 6)
+//	{
+//		cout << "Friday";
+//	}
+//	else if (day == 7)
+//	{
+//		cout << "Saturday";
+//	}
+//	else
+//	{
+//		cout << "Try something right";
+//	}
+//}
 
 //#include <iostream>
 //#include <string.h>
