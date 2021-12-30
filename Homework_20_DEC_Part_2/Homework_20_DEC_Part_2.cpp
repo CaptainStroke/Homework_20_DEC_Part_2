@@ -131,8 +131,67 @@
 //5. Ввести с клавиатуры шестизначный номер трамвайного(троллейбусного) билета, 
 //и определить является ли он счастливым(совпадают суммы трёх первых и трёх последних цифр билета).
 
+//#include <iostream>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	cout << "Enter 6 digits for number. Let's find out if it is lucky\n";
+//	int ticket;
+//	cin >> ticket;
+//	int six = ticket / 100000 % 10;
+//	int five = ticket / 10000 % 10;
+//	int four = ticket / 1000 % 10;
+//	int three = ticket / 100 % 10;
+//	int two = ticket / 10 % 10;
+//	int one = ticket % 10;
+//	cout << six << five << four << three << two << one;
+//	(six + five + four) == (three + two + one) ? cout << ("\nLucky number!!! - ") << (six + five + four) : cout << ("\nTry again - ") << six + five + four << " is not equal " << three + two + one;
+//}
+
 //6. Вводится время(только часы) – программа выводит приветствие, 
 //соответствующее введённому времени(например, ввели 15 часов – выводится приветствие «добрый день»).
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << "Enter hours -";
+	int time;
+	cin >> time;
+	string Day = "Good afternoon. The sun is high!!";
+	string Night = "Good Night. Sweet dream!!";
+	string Midnight = "Pleasant Midnight!!";
+	string Mourning = "Good Mourning. Rise and shine!!";
+	string Evening = "End of day. Good evening. Relax time!";
+	string Noon = "Mid day. Lunch!!";
+		if (time == 0)
+	{
+		cout << Midnight;
+	}
+	else if (time > 0 && time < 6 || time >= 21 && time < 24 && time != 0)
+	{
+		cout << Night;
+	}
+	else if (time < 12 && time >6)
+		{
+			cout << Mourning;
+		}
+	else if (time == 12)
+		{
+			cout << Noon;
+		}
+	else if (time < 17 && time > 12)
+		{
+			cout << Day;
+		}
+	else if (time <21 && time >=17)
+		{cout << Evening }
+	else
+		{
+			cout << "Wrong input";
+		}
+}
 
 //7. Программа подсчета идеального веса к росту.
 //Ввести рост и вес, вывести сообщение о том, сколько  нужно кг набрать 
