@@ -152,50 +152,158 @@
 //6. Вводится время(только часы) – программа выводит приветствие, 
 //соответствующее введённому времени(например, ввели 15 часов – выводится приветствие «добрый день»).
 
-#include <iostream>
-using namespace std;
-int main()
-{
-	cout << "Enter hours -";
-	int time;
-	cin >> time;
-	string Day = "Good afternoon. The sun is high!!";
-	string Night = "Good Night. Sweet dream!!";
-	string Midnight = "Pleasant Midnight!!";
-	string Mourning = "Good Mourning. Rise and shine!!";
-	string Evening = "End of day. Good evening. Relax time!";
-	string Noon = "Mid day. Lunch!!";
-		if (time == 0)
-	{
-		cout << Midnight;
-	}
-	else if (time > 0 && time < 6 || time >= 21 && time < 24 && time != 0)
-	{
-		cout << Night;
-	}
-	else if (time < 12 && time >6)
-		{
-			cout << Mourning;
-		}
-	else if (time == 12)
-		{
-			cout << Noon;
-		}
-	else if (time < 17 && time > 12)
-		{
-			cout << Day;
-		}
-	else if (time <21 && time >=17)
-		{cout << Evening }
-	else
-		{
-			cout << "Wrong input";
-		}
-}
+//#include <iostream>
+//using namespace std;
+//int main()
+//{
+//	cout << "Enter hours -";
+//	int time;
+//	cin >> time;
+//	string Day = "Good afternoon. The sun is high!!";
+//	string Night = "Good Night. Sweet dream!!";
+//	string Midnight = "Pleasant Midnight!!";
+//	string Mourning = "Good Mourning. Rise and shine!!";
+//	string Evening = "End of day. Good evening. Relax time!";
+//	string Noon = "Mid day. Lunch!!";
+//		if (time == 0)
+//	{
+//		cout << Midnight;
+//	}
+//	else if (time > 0 && time < 6 || time >= 21 && time < 24 && time != 0)
+//	{
+//		cout << Night;
+//	}
+//	else if (time < 12 && time >6)
+//		{
+//			cout << Mourning;
+//		}
+//	else if (time == 12)
+//		{
+//			cout << Noon;
+//		}
+//	else if (time < 17 && time > 12)
+//		{
+//			cout << Day;
+//		}
+//	else if (time < 21 && time >=17)
+//		{
+//			cout << Evening;
+//		}
+//	else
+//		{
+//			cout << "Wrong input";
+//		}
+//}
 
+//#include <iostream>
+//#include <math.h>
+//#include <conio.h>
+//using namespace std;
+//int main()
+//{
+//	cout << "Enter hours -";
+//	int time;
+//	cin >> time;
+//	string Day = "Good afternoon. The sun is high!!";
+//	string Night = "Good Night. Sweet dream!!";
+//	string Midnight = "Pleasant Midnight!!";
+//	string Mourning = "Good Mourning. Rise and shine!!";
+//	string Evening = "End of day. Good evening. Relax time!";
+//	string Noon = "Mid day. Lunch!!";
+//	switch (time)
+//	{case 1, 5, 6, 7:
+//		cout << "Good Night";
+//		break;
+//	}
+//		
+//}
 //7. Программа подсчета идеального веса к росту.
 //Ввести рост и вес, вывести сообщение о том, сколько  нужно кг набрать 
 //или сбросить(идеальный вес = рост – 110 для девушек, и - 100 для парней).
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+	float kg;
+	float cm;
+	float bmi;//body mass index
+	float fbmi;//female bmi = bmi - 10 kg
+	cout << "Enter your height in centimeters - ";
+	cin >> cm;
+	cout << "Enter your weight in kilos - ";
+	cin >> kg;
+	bmi = cm - kg;
+	fbmi = bmi - 10;
+
+	/*if (bmi == 100)
+	{
+		cout << "Yout weight is perfect for a men. Just continue";
+	}
+	else if (bmi < 85)
+	{
+		cout << "Stop eat NOW. Step off the scales. You will break them";
+	}
+	else if (bmi < 95 || bmi >= 85)
+	{
+		cout << "Look for diet";
+	}
+	else if (bmi < 100 || bmi >= 95)
+	{
+		cout << "You are overweight, but it's normal";
+	}
+	else if (bmi >+ 105 || bmi > 100)
+	{
+		cout << "You are light, but it's ok";
+	}
+	else if (bmi <= 115 || bmi > 105)
+	{
+		cout << "Look for diet";
+	}
+	else if (bmi > 115)
+	{
+		cout << "Eat NOW. Are you learn flying. Model business?";
+	}
+	else
+	{
+		cout << "Wrong entry";
+	}*/
+	/*if (fbmi == 100)
+	{
+		cout << "Yout weight is perfect for a men. Just continue";
+	}
+	else if (fbmi < 85)
+	{
+		cout << "Stop eat NOW. Step off the scales. You will break them";
+	}
+	else if (fbmi < 95 || fbmi >= 85)
+	{
+		cout << "Look for diet";
+	}
+	else if (fbmi < 100 || fbmi >= 95)
+	{
+		cout << "You are overweight, but it's normal";
+	}
+	else if (fbmi > +105 || fbmi > 100)
+	{
+		cout << "You are light, but it's ok";
+	}
+	else if (fbmi <= 115 || fbmi > 105)
+	{
+		cout << "Look for diet";
+	}
+	else if (fbmi > 115)
+	{
+		cout << "Eat NOW. Are you learn flying. Model business?";
+	}
+	else
+	{
+		cout << "Wrong entry";
+	}*/
+
+}
+
 
 //8. Ввести любую дату(день, месяц и год вводятся по отдельности).
 //Проверить корректность введённых значений.Вывести дату следующего дня.
