@@ -214,64 +214,184 @@
 //	{case 1, 5, 6, 7:
 //		cout << "Good Night";
 //		break;
-//	}
-//		
+//	}		
 //}
+
 //7. Программа подсчета идеального веса к росту.
 //Ввести рост и вес, вывести сообщение о том, сколько  нужно кг набрать 
 //или сбросить(идеальный вес = рост – 110 для девушек, и - 100 для парней).
+
+//#include <iostream>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	float kg;
+//	float cm;
+//	float bmi;//body mass index. Perfect for men = 100; for women = 110
+//	cout << "Enter your height in centimeters - ";
+//	cin >> cm;
+//	cout << "Enter your weight in kilos - ";
+//	cin >> kg;
+//	bmi = cm - kg;
+//	int gender;
+//	cout << "Male - '1' ; Female - '2'\n";
+//	cin >> gender;
+//	if (gender == 1 && bmi == 100)
+//	{
+//		cout << "Your weight is perfect for a men. Just continue";
+//	}
+//	else if (gender == 2 && bmi == 110)
+//	{
+//		cout << "Your weight is perfect for a women. Just continue";
+//	}
+//	else if (gender == 1 && bmi < 100)
+//	{
+//		cout << "Oh, boy. Stop eat NOW. It's holidays. But You shold loose - " << (abs)(bmi - 100) <<  " kilos";
+//	}
+//	else if (gender == 1 && bmi > 100)
+//	{
+//		cout << "It is the best time to get some kilos. Particularly  - " << (abs)(bmi - 100) << " kilos";
+//	}
+//	else if (gender == 2 && bmi < 110)
+//	{
+//		cout << "Stop eat NOW, Lady. You shold loose - " << (abs)(bmi - 110) << " kilos in GYM";
+//	}
+//	else if (gender == 2 && bmi > 110)
+//	{
+//		cout << "Get some kilos during holidays. Exactly - " << (abs)(bmi - 110) << " kilos";
+//	}
+//		else 
+//	{
+//		cout << "Wrong entry";
+//	}
+//}
+
+
+//8. Ввести любую дату(день, месяц и год вводятся по отдельности).
+//Проверить корректность введённых значений.Вывести дату следующего дня.
 
 #include <iostream>
 #include <string.h>
 using namespace std;
 int main()
 {
-	float kg;
-	float cm;
-	float bmi;//body mass index. Perfect for men = 100; for women = 110
-	cout << "Enter your height in centimeters - ";
-	cin >> cm;
-	cout << "Enter your weight in kilos - ";
-	cin >> kg;
-	bmi = cm - kg;
-	int gender;
-	cout << "Male - '1' ; Female - '2'\n";
-	cin >> gender;
-
-	if (gender == 1 && bmi == 100)
+	int day;
+	int month;
+	int year;
+	cin >> day >> month >> year;
+	cout << "The date you input\n";
+	cout << day << "." << month << "." << year << "\n";
+	cout << "Next day";
+	if (month == 1 && day <= 30 && day >= 1 )// january
 	{
-		cout << "Your weight is perfect for a men. Just continue";
+		cout << ++day << "." << month << "." << "." << year;
 	}
-	else if (gender == 2 && bmi == 110)
+	else if (month == 1 && day == 31)//jan-feb
 	{
-		cout << "Your weight is perfect for a women. Just continue";
+		cout << day - 30 << "." << ++month << "." << year;
 	}
-	else if (gender == 1 && bmi < 100)
+	else if (year % 4 == 0 && month == 2 && day <= 28 && day >= 1)//febuary leap
 	{
-		cout << "Oh, boy. Stop eat NOW. It's holidays. But You shold loose - " << (abs)(bmi - 100) <<  " kilos";
+		cout << ++day << "." << month << "." << year;
 	}
-	else if (gender == 1 && bmi > 100)
+	else if (year % 4 == 0 && month == 2 && day == 29) // feb-march
 	{
-		cout << "It is the best time to get some kilos. Particularly  - " << (abs)(bmi - 100) << " kilos";
+		cout << day - 28 << "." << ++month << "." << year;
 	}
-	else if (gender == 2 && bmi < 110)
+	else if (year % 4 != 0 && month == 2 && day <= 27 && day >= 1)//febuary normal
 	{
-		cout << "Stop eat NOW, Lady. You shold loose - " << (abs)(bmi - 110) << " kilos in GYM";
+		cout << ++day << "." << month << "." << year;
 	}
-	else if (gender == 2 && bmi > 110)
+	else if (year % 4 != 0 && month == 2 && day == 28)//feb-march
 	{
-		cout << "Get some kilos during holidays. Exactly - " << (abs)(bmi - 110) << " kilos";
+		cout << day - 27 << "." << ++month << "." << year;
 	}
-		else 
+	else if (month == 3 && day <= 30 && day >= 1)// march
 	{
-		cout << "Wrong entry";
+		cout << ++day << "." << month << "." << year;
 	}
-
-}
-
-
-//8. Ввести любую дату(день, месяц и год вводятся по отдельности).
-//Проверить корректность введённых значений.Вывести дату следующего дня.
+	else if (month == 3 && day == 31)// march-april
+	{
+		cout << day - 30<< "." << ++month << "." << year;
+	}
+	else if (month == 4 && day <= 29 && day >= 1)// april
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 4 && day == 30)//april-may
+	{
+		cout << day - 29 << "." << ++month << "." << year;
+	}
+	else if (month == 5 && day <= 30 && day >= 1)// may
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 5 && day == 31)//may-june
+	{
+		cout << day - 30 << "." << ++month << "." << year;
+	}
+	else if (month == 6 && day <= 29 && day >= 1)// june
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 6 && day == 30)//june-july
+	{
+		cout << day - 29 << "." << ++month << "." << year;
+	}
+	else if (month == 7 && day <= 30 && day >= 1)// july
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 7 && day == 31)//july-august
+	{
+		cout << day - 30 << "." << ++month << "." << year;
+	}
+	else if (month == 8 && day <= 30 && day >= 1)//august
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 8 && day == 31)//august-septenber
+	{
+		cout << day - 30 << "." << ++month << "." << year;
+	}
+	else if (month == 9 && day <= 29 && day >= 1)// september
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 9 && day == 30)//sept-october
+	{
+		cout << day - 29 << "." << ++month << "." << year;
+	}
+	else if (month == 10 && day <= 30 && day >= 1)//october
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 10 && day == 31)//october-november
+	{
+		cout << day - 30 << "." << ++month << "." << year;
+	}
+	else if (month == 11 && day <= 29 && day >= 1)//november
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 11 && day == 30)//november-december
+	{
+		cout << day - 29 << "." << ++month << "." << year;
+	}
+	else if (month == 12 && day <= 30 && day >= 1)//december
+	{
+		cout << ++day << "." << month << "." << year;
+	}
+	else if (month == 12 && day == 31)//december-january-newyear
+	{
+		cout << day - 30 << "." << month - 11 << "." << ++year;
+	}
+	else
+	{
+	cout << "wrong input";
+	}
+ }
 
 //9. Написать программу, которая предлагает пользователю выбрать животное из списка
 //(1 – кошка, 2 – собака и тд.), и в ответ показывает, какие звуки издаёт выбранное животное.
