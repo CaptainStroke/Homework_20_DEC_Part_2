@@ -228,79 +228,44 @@ int main()
 {
 	float kg;
 	float cm;
-	float bmi;//body mass index
-	float fbmi;//female bmi = bmi - 10 kg
+	float bmi;//body mass index. Perfect for men = 100; for women = 110
 	cout << "Enter your height in centimeters - ";
 	cin >> cm;
 	cout << "Enter your weight in kilos - ";
 	cin >> kg;
 	bmi = cm - kg;
-	fbmi = bmi - 10;
+	int gender;
+	cout << "Male - '1' ; Female - '2'\n";
+	cin >> gender;
 
-	/*if (bmi == 100)
+	if (gender == 1 && bmi == 100)
 	{
-		cout << "Yout weight is perfect for a men. Just continue";
+		cout << "Your weight is perfect for a men. Just continue";
 	}
-	else if (bmi < 85)
+	else if (gender == 2 && bmi == 110)
 	{
-		cout << "Stop eat NOW. Step off the scales. You will break them";
+		cout << "Your weight is perfect for a women. Just continue";
 	}
-	else if (bmi < 95 || bmi >= 85)
+	else if (gender == 1 && bmi < 100)
 	{
-		cout << "Look for diet";
+		cout << "Oh, boy. Stop eat NOW. It's holidays. But You shold loose - " << (abs)(bmi - 100) <<  " kilos";
 	}
-	else if (bmi < 100 || bmi >= 95)
+	else if (gender == 1 && bmi > 100)
 	{
-		cout << "You are overweight, but it's normal";
+		cout << "It is the best time to get some kilos. Particularly  - " << (abs)(bmi - 100) << " kilos";
 	}
-	else if (bmi >+ 105 || bmi > 100)
+	else if (gender == 2 && bmi < 110)
 	{
-		cout << "You are light, but it's ok";
+		cout << "Stop eat NOW, Lady. You shold loose - " << (abs)(bmi - 110) << " kilos in GYM";
 	}
-	else if (bmi <= 115 || bmi > 105)
+	else if (gender == 2 && bmi > 110)
 	{
-		cout << "Look for diet";
+		cout << "Get some kilos during holidays. Exactly - " << (abs)(bmi - 110) << " kilos";
 	}
-	else if (bmi > 115)
-	{
-		cout << "Eat NOW. Are you learn flying. Model business?";
-	}
-	else
+		else 
 	{
 		cout << "Wrong entry";
-	}*/
-	/*if (fbmi == 100)
-	{
-		cout << "Yout weight is perfect for a men. Just continue";
 	}
-	else if (fbmi < 85)
-	{
-		cout << "Stop eat NOW. Step off the scales. You will break them";
-	}
-	else if (fbmi < 95 || fbmi >= 85)
-	{
-		cout << "Look for diet";
-	}
-	else if (fbmi < 100 || fbmi >= 95)
-	{
-		cout << "You are overweight, but it's normal";
-	}
-	else if (fbmi > +105 || fbmi > 100)
-	{
-		cout << "You are light, but it's ok";
-	}
-	else if (fbmi <= 115 || fbmi > 105)
-	{
-		cout << "Look for diet";
-	}
-	else if (fbmi > 115)
-	{
-		cout << "Eat NOW. Are you learn flying. Model business?";
-	}
-	else
-	{
-		cout << "Wrong entry";
-	}*/
 
 }
 
