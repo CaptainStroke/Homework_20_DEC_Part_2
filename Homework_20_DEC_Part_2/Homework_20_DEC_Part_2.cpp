@@ -460,6 +460,54 @@
 //Если все ответы правильные – в конце выводится сообщение о победе.
 //По желанию можно реализовать несгораемые суммы, подсказки, работу с файлами, звуковые эффекты и тд.
 
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+	setlocale(0, "UKR");
+	cout << "Hi. What is your name?\n";
+	string name;
+	int money = 100;
+	cin >> name;
+	cout << "Hello " << name << ". You are welcome on the Millioner show.\n";
+	cout << name << ". Listen for first question. It is for " << money << "\n";
+	cout << "What is the correct month in Ukraine?\n";
+	cout << "Сiчень January Январь 01 \n";
+	cout << "   A      B       B    D \n";
+	cout << "Enter "char letter;
+
+	cin >> letter;
+	if (letter == 'a' || letter == 'A')
+	{
+		cout << "Correct answer\n";
+		cout << "The prize doubles\n";
+		cout << money << " dollars\n";
+	}
+	else 
+	{
+		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+		return 0;
+	}
+	cout << "What Matrix is the latest?\n";
+	cout << "'Matrix' 'Matrix Reload' 'Matrix Revolution' 'Matrix Resurrections'\n";
+	cout << "    A           B                C                    D\n";
+	cout << "Enter the letter";
+	cin >> letter;
+	if (letter == 'd' || letter == 'D')
+	{
+		cout << "Correct answer\n";
+		cout << "The prize doubles\n";
+		cout << money << " dollars\n";
+	}
+	else
+	{
+		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+		return 0;
+	}
+
+}
+
 //11. Пользователь вводит с клавиатуры количество градусов по Цельсию,
 //которое соответствует предполагаемой температуре за окном.
 //Программа сообщает, тепло сейчас или холодно, жарко или мороз,
