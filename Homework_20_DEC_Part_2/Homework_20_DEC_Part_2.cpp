@@ -481,7 +481,7 @@ int main()
 	if (letter == 'a' || letter == 'A')
 	{
 		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
+		cout << "You get first level prize \n";
 		cout << money << " dollars\n";
 	}
 	else 
@@ -498,7 +498,7 @@ int main()
 	{
 		cout << "Correct answer\n";
 		cout << "The prize doubles\n";
-		cout << money << " dollars\n";
+		cout << money*2 << " dollars\n";
 	}
 	else
 	{
