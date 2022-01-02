@@ -271,131 +271,188 @@
 //8. Ввести любую дату(день, месяц и год вводятся по отдельности).
 //Проверить корректность введённых значений.Вывести дату следующего дня.
 
-#include <iostream>
-#include <string.h>
-using namespace std;
-int main()
-{
-	int day;
-	int month;
-	int year;
-	cin >> day >> month >> year;
-	cout << "The date you input\n";
-	cout << day << "." << month << "." << year << "\n";
-	cout << "Next day";
-	if (month == 1 && day <= 30 && day >= 1 )// january
-	{
-		cout << ++day << "." << month << "." << "." << year;
-	}
-	else if (month == 1 && day == 31)//jan-feb
-	{
-		cout << day - 30 << "." << ++month << "." << year;
-	}
-	else if (year % 4 == 0 && month == 2 && day <= 28 && day >= 1)//febuary leap
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (year % 4 == 0 && month == 2 && day == 29) // feb-march
-	{
-		cout << day - 28 << "." << ++month << "." << year;
-	}
-	else if (year % 4 != 0 && month == 2 && day <= 27 && day >= 1)//febuary normal
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (year % 4 != 0 && month == 2 && day == 28)//feb-march
-	{
-		cout << day - 27 << "." << ++month << "." << year;
-	}
-	else if (month == 3 && day <= 30 && day >= 1)// march
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 3 && day == 31)// march-april
-	{
-		cout << day - 30<< "." << ++month << "." << year;
-	}
-	else if (month == 4 && day <= 29 && day >= 1)// april
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 4 && day == 30)//april-may
-	{
-		cout << day - 29 << "." << ++month << "." << year;
-	}
-	else if (month == 5 && day <= 30 && day >= 1)// may
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 5 && day == 31)//may-june
-	{
-		cout << day - 30 << "." << ++month << "." << year;
-	}
-	else if (month == 6 && day <= 29 && day >= 1)// june
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 6 && day == 30)//june-july
-	{
-		cout << day - 29 << "." << ++month << "." << year;
-	}
-	else if (month == 7 && day <= 30 && day >= 1)// july
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 7 && day == 31)//july-august
-	{
-		cout << day - 30 << "." << ++month << "." << year;
-	}
-	else if (month == 8 && day <= 30 && day >= 1)//august
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 8 && day == 31)//august-septenber
-	{
-		cout << day - 30 << "." << ++month << "." << year;
-	}
-	else if (month == 9 && day <= 29 && day >= 1)// september
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 9 && day == 30)//sept-october
-	{
-		cout << day - 29 << "." << ++month << "." << year;
-	}
-	else if (month == 10 && day <= 30 && day >= 1)//october
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 10 && day == 31)//october-november
-	{
-		cout << day - 30 << "." << ++month << "." << year;
-	}
-	else if (month == 11 && day <= 29 && day >= 1)//november
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 11 && day == 30)//november-december
-	{
-		cout << day - 29 << "." << ++month << "." << year;
-	}
-	else if (month == 12 && day <= 30 && day >= 1)//december
-	{
-		cout << ++day << "." << month << "." << year;
-	}
-	else if (month == 12 && day == 31)//december-january-newyear
-	{
-		cout << day - 30 << "." << month - 11 << "." << ++year;
-	}
-	else
-	{
-	cout << "wrong input";
-	}
- }
+//#include <iostream>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	int day;
+//	int month;
+//	int year;
+//	cin >> day >> month >> year;
+//	cout << "The date you input\n";
+//	cout << day << "." << month << "." << year << "\n";
+//	cout << "Next day";
+//	if (month == 1 && day <= 30 && day >= 1 )// january
+//	{
+//		cout << ++day << "." << month << "." << "." << year;
+//	}
+//	else if (month == 1 && day == 31)//jan-feb
+//	{
+//		cout << day - 30 << "." << ++month << "." << year;
+//	}
+//	else if (year % 4 == 0 && month == 2 && day <= 28 && day >= 1)//febuary leap
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (year % 4 == 0 && month == 2 && day == 29) // feb-march
+//	{
+//		cout << day - 28 << "." << ++month << "." << year;
+//	}
+//	else if (year % 4 != 0 && month == 2 && day <= 27 && day >= 1)//febuary normal
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (year % 4 != 0 && month == 2 && day == 28)//feb-march
+//	{
+//		cout << day - 27 << "." << ++month << "." << year;
+//	}
+//	else if (month == 3 && day <= 30 && day >= 1)// march
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 3 && day == 31)// march-april
+//	{
+//		cout << day - 30<< "." << ++month << "." << year;
+//	}
+//	else if (month == 4 && day <= 29 && day >= 1)// april
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 4 && day == 30)//april-may
+//	{
+//		cout << day - 29 << "." << ++month << "." << year;
+//	}
+//	else if (month == 5 && day <= 30 && day >= 1)// may
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 5 && day == 31)//may-june
+//	{
+//		cout << day - 30 << "." << ++month << "." << year;
+//	}
+//	else if (month == 6 && day <= 29 && day >= 1)// june
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 6 && day == 30)//june-july
+//	{
+//		cout << day - 29 << "." << ++month << "." << year;
+//	}
+//	else if (month == 7 && day <= 30 && day >= 1)// july
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 7 && day == 31)//july-august
+//	{
+//		cout << day - 30 << "." << ++month << "." << year;
+//	}
+//	else if (month == 8 && day <= 30 && day >= 1)//august
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 8 && day == 31)//august-septenber
+//	{
+//		cout << day - 30 << "." << ++month << "." << year;
+//	}
+//	else if (month == 9 && day <= 29 && day >= 1)// september
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 9 && day == 30)//sept-october
+//	{
+//		cout << day - 29 << "." << ++month << "." << year;
+//	}
+//	else if (month == 10 && day <= 30 && day >= 1)//october
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 10 && day == 31)//october-november
+//	{
+//		cout << day - 30 << "." << ++month << "." << year;
+//	}
+//	else if (month == 11 && day <= 29 && day >= 1)//november
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 11 && day == 30)//november-december
+//	{
+//		cout << day - 29 << "." << ++month << "." << year;
+//	}
+//	else if (month == 12 && day <= 30 && day >= 1)//december
+//	{
+//		cout << ++day << "." << month << "." << year;
+//	}
+//	else if (month == 12 && day == 31)//december-january-newyear
+//	{
+//		cout << day - 30 << "." << month - 11 << "." << ++year;
+//	}
+//	else
+//	{
+//	cout << "wrong input";
+//	}
+// }
 
 //9. Написать программу, которая предлагает пользователю выбрать животное из списка
 //(1 – кошка, 2 – собака и тд.), и в ответ показывает, какие звуки издаёт выбранное животное.
 //В списке должно быть хотя бы 10 животных.
+
+//#include <iostream>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	cout << "The list of animals:\n";
+//	cout << "1 - Dog\n";
+//	cout << "2 - Cat\n";
+//	cout << "3 - Cock\n";
+//	cout << "4 - Parrot\n";
+//	cout << "5 - Monkey\n";
+//	cout << "6 - Cow\n";
+//	cout << "7 - Sheep\n";
+//	cout << "8 - Pig\n";
+//	cout << "9 - Donkey\n";
+//	cout << "10 - Horse\n";
+//	int animal;
+//	cout << "Enter the number of animal and you will see the sound\n";
+//	cin >> animal;
+//	switch (animal)
+//	{
+//	case 1:
+//		cout << "Dog - Wow wow";
+//		break;
+//	case 2:
+//		cout << "Cat - Myu-myu";
+//		break;
+//	case 3:
+//		cout << "Cock - Kukareku";
+//		break;
+//	case 4:
+//		cout << "Parrot - Vse Duraki";
+//		break;
+//	case 5:
+//		cout << "Monkey - AaA-UuU";
+//		break;
+//	case 6:
+//		cout << "Cow - MuMuMuuuu";
+//		break;
+//	case 7:
+//		cout << "Sheep - Bebebebeeeee";
+//		break;
+//	case 8:
+//		cout << "Donkey - IaIa";
+//		break;
+//	case 9:
+//		cout << "Horse - Tygydym";
+//		break;
+//	case 10:
+//		cout << "Pig - HruHru";
+//		break;
+//	default:
+//		cout << "Try somethng right";
+//		break;
+//	}
+//}
 
 //10. Написать игру "О, счастливчик!".
 //На экране по очереди появляются вопросы, и варианты ответов.Неправильный выбор - игра окончена.
