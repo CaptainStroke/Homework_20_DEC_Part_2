@@ -475,8 +475,8 @@ int main()
 	cout << "What is the correct month in Ukraine?\n";
 	cout << "Сiчень January Январь 01 \n";
 	cout << "   A      B       B    D \n";
-	cout << "Enter "char letter;
-
+	cout << "Enter correct answer letter";
+	char letter;
 	cin >> letter;
 	if (letter == 'a' || letter == 'A')
 	{
