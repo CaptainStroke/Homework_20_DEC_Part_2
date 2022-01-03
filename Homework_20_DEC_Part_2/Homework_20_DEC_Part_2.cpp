@@ -459,270 +459,361 @@
 //Правильный ответ – переходим к следующему вопросу.
 //Если все ответы правильные – в конце выводится сообщение о победе.
 //По желанию можно реализовать несгораемые суммы, подсказки, работу с файлами, звуковые эффекты и тд.
-
-#include <iostream>
-#include <string.h>
-using namespace std;
-int main()
-{
-	setlocale(0, "UKR");
-	cout << "Hi. What is your name?\n";
-	string name;
-	int money = 500;
-	cin >> name;
-	cout << "Hello " << name << ". You are welcome on the Millioner show.\n";
-	cout << name << ". Listen for first question. It is for " << money << "\n";//1 question
-	cout << "What is the correct month in Ukraine?\n";
-	cout << "Сiчень January Январь 01 \n";
-	cout << "   A      B       B    D \n";
-	cout << "Enter correct answer letter\n";
-	char letter;
-	cin >> letter;
-	if (letter == 'a' || letter == 'A')
-	{
-		cout << "Correct answer\n";
-		cout << "You get first level prize \n";
-		cout << money << " dollars\n";
-	}
-	else 
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Second question. Each next is daunting.\n";
-	cout << "What Matrix is the latest?\n";//2 question
-	cout << "'Matrix' 'Matrix Reload' 'Matrix Revolution' 'Matrix Resurrections'\n";
-	cout << "    A           B                C                    D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'd' || letter == 'D')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money*2 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << name << ". Third question is ahead\n";
-	cout << "Where the sun is rising?\n";//3 question
-	cout << "'In Japan' 'East' 'West' 'South'\n";
-	cout << "    A        B      C       D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'b' || letter == 'B')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money*4 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Next question. The fourth\n";
-	cout << "How Black Sea appeared?\n";//4 question
-	cout << "'Naturaly' 'Kozaks dug' 'USA help' 'Euro Union Help'\n";
-	cout << "    A            B           C            D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'a' || letter == 'A')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money*6 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Fifth question. You have " << money * 5 << " $\n";
-	cout << "How many husbands Alla Pugacheva had?\n";//5 question
-	cout << "'1' '2' '4' '5'\n";
-	cout << " A   B   C   D\n";
-	cout << "Enter the letter. And you can double your money\n";
-	cin >> letter;
-	if (letter == 'd' || letter == 'D')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money * 10 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Sixth question\n";
-	cout << "What is the name of Tesla CEO?\n";//6 question
-	cout << "'Allen Delon' 'Alien Mask' 'Elon Musk' 'Nicola Tesla'\n";
-	cout << "      A            B            C            D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'c' || letter == 'C')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << 14 * money << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Seventh question\n";
-	cout << "What was the name of second Microsoft game concole?\n";//7 question
-	cout << "'XBOX' 'XBOX ONE' 'XBOX Series X' 'XBOX360'\n";
-	cout << "  A        B              C           D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'd' || letter == 'D')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money * 20 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Eighth question\n";
-	cout << "Who won the last Euro 2020 in 2021?\n";//8 question
-	cout << "'Italy' 'Germany' 'Ukraine' 'England'\n";
-	cout << "    A       B         C         D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'a' || letter == 'A')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money * 40 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << name << ". Nineth question\n";
-	cout << "What iPhone skipped the launch?\n";//9 question
-	cout << "'X' '4S' '9' '13'\n";
-	cout << " A    B   C   D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'c' || letter == 'C')
-	{
-		cout << "Correct answer\n";
-		cout << name << ". The prize doubles\n";
-		cout << money * 60 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Tenth question\n";
-	cout << "Most viewed video on Youtube for Vremya i Steklo?\n";//10 question
-	cout << "'Song 505' 'Name 505' 'Song 404' 'Name 404'\n";
-	cout << "    A           B       C      D\n";
-	cout << "Enter the letter";
-	cin >> letter;
-	if (letter == 'b' || letter == 'B')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money * 100 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Eleventh question\n";
-	cout << "In which year Vitaliy Klichko really lives?\n";//11 question
-	cout << "'2220' '2202' '2022' 'В завтрашнем дне'\n";
-	cout << "  A      B      C            D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'c' || letter == 'C')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money * 200 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Twelveth question\n";
-	cout << "What was the lucky number of main hero in novel 'Numbers' of Victor Pelevin?\n";//12 question
-	cout << "'7' 'SUN34' '34' '43'\n";
-	cout << " A     B     C    D\n";
-	cout << "Enter the letter\n";
-	cin >> letter;
-	if (letter == 'c' || letter == 'C')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money * 500 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Lucky 13th question\n";
-	cout << "Which was in sequence 'Ocean's Thirteen'?\n";//13 question
-	cout << "'1' '2' '3' 'Prequel'\n";
-	cout << " A   B   C      D\n";
-	cout << "Enter the letter";
-	cin >> letter;
-	if (letter == 'c' || letter == 'C')
-	{
-		cout << "Correct answer\n";
-		cout << name << "The prize doubles\n";
-		cout << money * 1000 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "Fourteenth question. The last according to new rules and you will walk away with million\n";
-	cout << "A googol equals 1 followed by how many zeros?\n";//14 question
-	cout << "'Ten zeros' 'Hundred zeros' 'Thousend zeros' 'Million zeros'\n";
-	cout << "     A              B                C               D\n";
-	cout << "Enter the letter";
-	cin >> letter;
-	if (letter == 'b' || letter == 'B')
-	{
-		cout << "Correct answer\n";
-		cout << "The prize doubles\n";
-		cout << money * 2000 << " dollars\n";
-	}
-	else
-	{
-		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
-		return 0;
-	}
-	cout << "You are new Millionair. Congrats!/n";
-	return 0;
-}
+//
+//#include <iostream>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	setlocale(0, "UKR");
+//	cout << "Hi. What is your name?\n";
+//	string name;
+//	int money = 500;
+//	cin >> name;
+//	cout << "Hello " << name << ". You are welcome on the Millioner show.\n";
+//	cout << name << ". Listen for first question. It is for " << money << "\n";//1 question
+//	cout << "What is the correct month in Ukraine?\n";
+//	cout << "Сiчень January Январь 01 \n";
+//	cout << "   A      B       B    D \n";
+//	cout << "Enter correct answer letter\n";
+//	char letter;
+//	cin >> letter;
+//	if (letter == 'a' || letter == 'A')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "You get first level prize \n";
+//		cout << money << " dollars\n";
+//	}
+//	else 
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Second question. Each next is daunting.\n";
+//	cout << "What Matrix is the latest?\n";//2 question
+//	cout << "'Matrix' 'Matrix Reload' 'Matrix Revolution' 'Matrix Resurrections'\n";
+//	cout << "    A           B                C                    D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'd' || letter == 'D')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money*2 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << name << ". Third question is ahead\n";
+//	cout << "Where the sun is rising?\n";//3 question
+//	cout << "'In Japan' 'East' 'West' 'South'\n";
+//	cout << "    A        B      C       D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'b' || letter == 'B')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money*4 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Next question. The fourth\n";
+//	cout << "How Black Sea appeared?\n";//4 question
+//	cout << "'Naturaly' 'Kozaks dug' 'USA help' 'Euro Union Help'\n";
+//	cout << "    A            B           C            D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'a' || letter == 'A')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money*6 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Fifth question. You have " << money * 5 << " $\n";
+//	cout << "How many husbands Alla Pugacheva had?\n";//5 question
+//	cout << "'1' '2' '4' '5'\n";
+//	cout << " A   B   C   D\n";
+//	cout << "Enter the letter. And you can double your money\n";
+//	cin >> letter;
+//	if (letter == 'd' || letter == 'D')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money * 10 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Sixth question\n";
+//	cout << "What is the name of Tesla CEO?\n";//6 question
+//	cout << "'Allen Delon' 'Alien Mask' 'Elon Musk' 'Nicola Tesla'\n";
+//	cout << "      A            B            C            D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'c' || letter == 'C')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << 14 * money << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Seventh question\n";
+//	cout << "What was the name of second Microsoft game concole?\n";//7 question
+//	cout << "'XBOX' 'XBOX ONE' 'XBOX Series X' 'XBOX360'\n";
+//	cout << "  A        B              C           D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'd' || letter == 'D')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money * 20 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Eighth question\n";
+//	cout << "Who won the last Euro 2020 in 2021?\n";//8 question
+//	cout << "'Italy' 'Germany' 'Ukraine' 'England'\n";
+//	cout << "    A       B         C         D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'a' || letter == 'A')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money * 40 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << name << ". Nineth question\n";
+//	cout << "What iPhone skipped the launch?\n";//9 question
+//	cout << "'X' '4S' '9' '13'\n";
+//	cout << " A    B   C   D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'c' || letter == 'C')
+//	{
+//		cout << "Correct answer\n";
+//		cout << name << ". The prize doubles\n";
+//		cout << money * 60 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Tenth question\n";
+//	cout << "Most viewed video on Youtube for Vremya i Steklo?\n";//10 question
+//	cout << "'Song 505' 'Name 505' 'Song 404' 'Name 404'\n";
+//	cout << "    A           B       C      D\n";
+//	cout << "Enter the letter";
+//	cin >> letter;
+//	if (letter == 'b' || letter == 'B')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money * 100 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Eleventh question\n";
+//	cout << "In which year Vitaliy Klichko really lives?\n";//11 question
+//	cout << "'2220' '2202' '2022' 'В завтрашнем дне'\n";
+//	cout << "  A      B      C            D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'c' || letter == 'C')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money * 200 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Twelveth question\n";
+//	cout << "What was the lucky number of main hero in novel 'Numbers' of Victor Pelevin?\n";//12 question
+//	cout << "'7' 'SUN34' '34' '43'\n";
+//	cout << " A     B     C    D\n";
+//	cout << "Enter the letter\n";
+//	cin >> letter;
+//	if (letter == 'c' || letter == 'C')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money * 500 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Lucky 13th question\n";
+//	cout << "Which was in sequence 'Ocean's Thirteen'?\n";//13 question
+//	cout << "'1' '2' '3' 'Prequel'\n";
+//	cout << " A   B   C      D\n";
+//	cout << "Enter the letter";
+//	cin >> letter;
+//	if (letter == 'c' || letter == 'C')
+//	{
+//		cout << "Correct answer\n";
+//		cout << name << "The prize doubles\n";
+//		cout << money * 1000 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "Fourteenth question. The last according to new rules and you will walk away with million\n";
+//	cout << "A googol equals 1 followed by how many zeros?\n";//14 question
+//	cout << "'Ten zeros' 'Hundred zeros' 'Thousend zeros' 'Million zeros'\n";
+//	cout << "     A              B                C               D\n";
+//	cout << "Enter the letter";
+//	cin >> letter;
+//	if (letter == 'b' || letter == 'B')
+//	{
+//		cout << "Correct answer\n";
+//		cout << "The prize doubles\n";
+//		cout << money * 2000 << " dollars\n";
+//	}
+//	else
+//	{
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		return 0;
+//	}
+//	cout << "You are new Millionair. Congrats!/n";
+//	return 0;
+//}
 
 //11. Пользователь вводит с клавиатуры количество градусов по Цельсию,
 //которое соответствует предполагаемой температуре за окном.
 //Программа сообщает, тепло сейчас или холодно, жарко или мороз,
 //а также генерирует прогноз погоды на завтра, с указанием скорости ветра,
-//возможных осадков и температуры воды в Чёрном море.
+
+//#include <iostream>
+//#include <ctime>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	int ball = rand()%20;
+//	cout << ball;
+//	
+//}
 
 //12. Реализовать программу «Предсказатель».Пользователь вводит вопрос.
 //Программа выдаёт случайный ответ из набора заранее предусмотренных ответов
 //(5 положительных, 5 отрицательных, 10 нейтральных вариантов).
+
+#include <iostream>
+#include <ctime>
+#include <string.h>
+using namespace std;
+int main()
+{
+	srand(time(NULL));
+	int ball = rand() % 20+1;
+	string wish;
+	cin >> wish;
+	cout << wish << "\n";
+	switch (ball)
+	{case 1:
+		cout << "Try harder\n";
+		break;
+	 case 2:
+		cout << "Work more\n";
+		break;
+	case 3:
+		cout << "Study in schools";
+		break;
+	case 4:
+		cout << "Say louder";
+		break;
+	case 5:
+		cout << "Try harder";
+		break;
+	case 6:
+		cout << "Try harder";
+		break;
+	case 7:
+		cout << "Try harder";
+		break;
+	case 8:
+		cout << "Try harder";
+		break;
+	case 9:
+		cout << "Try harder";
+		break;
+	case 10:
+		cout << "Try harder";
+		break;
+	case 11:
+		cout << "Try harder";
+		break;
+	case 12:
+		cout << "Try harder";
+		break;
+	case 13:
+		cout << "Try harder";
+		break;
+	case 14:
+		cout << "Try harder";
+		break;
+	case 15:
+		cout << "Try harder";
+		break;
+	case 16:
+		cout << "Try harder";
+		break;
+	case 17:
+		cout << "Try harder";
+		break;
+	case 18:
+		cout << "Try harder";
+		break;
+	case 19:
+		cout << "Try harder";
+		break;
+	case 20:
+		cout << "Try harder";
+	default:
+			cout << "Wrong";
+		break;
+	}
+
+	cout << ball;
+
+}
 
 //13. Пользователь указывает дату своего рождения(число и месяц).
 //Программа определяет знак зодиака пользователя и составляет для него гороскоп на ближайшую неделю.
