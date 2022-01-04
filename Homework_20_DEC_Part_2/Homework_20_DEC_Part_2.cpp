@@ -735,85 +735,83 @@
 //Программа выдаёт случайный ответ из набора заранее предусмотренных ответов
 //(5 положительных, 5 отрицательных, 10 нейтральных вариантов).
 
-#include <iostream>
-#include <ctime>
-#include <string.h>
-using namespace std;
-int main()
-{
-	srand(time(NULL));
-	int ball = rand() % 20+1;
-	string wish;
-	cin >> wish;
-	cout << wish << "\n";
-	switch (ball)
-	{case 1:
-		cout << "Try harder\n";
-		break;
-	 case 2:
-		cout << "Work more\n";
-		break;
-	case 3:
-		cout << "Study in schools";
-		break;
-	case 4:
-		cout << "Say louder";
-		break;
-	case 5:
-		cout << "Try harder";
-		break;
-	case 6:
-		cout << "Try harder";
-		break;
-	case 7:
-		cout << "Try harder";
-		break;
-	case 8:
-		cout << "Try harder";
-		break;
-	case 9:
-		cout << "Try harder";
-		break;
-	case 10:
-		cout << "Try harder";
-		break;
-	case 11:
-		cout << "Try harder";
-		break;
-	case 12:
-		cout << "Try harder";
-		break;
-	case 13:
-		cout << "Try harder";
-		break;
-	case 14:
-		cout << "Try harder";
-		break;
-	case 15:
-		cout << "Try harder";
-		break;
-	case 16:
-		cout << "Try harder";
-		break;
-	case 17:
-		cout << "Try harder";
-		break;
-	case 18:
-		cout << "Try harder";
-		break;
-	case 19:
-		cout << "Try harder";
-		break;
-	case 20:
-		cout << "Try harder";
-	default:
-			cout << "Wrong";
-		break;
-	}
-
-	cout << ball;
-
-}
+//#include <iostream>
+//#include <ctime>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	int ball = rand() % 20+1;
+//	string wish;
+//	cin >> wish;
+//	cout << wish << "\n";
+//	switch (ball)
+//	{case 1:
+//		cout << "You will loose\n";
+//		break;
+//	 case 2:
+//		cout << "You will find\n";
+//		break;
+//	case 3:
+//		cout << "You will get bad mark";
+//		break;
+//	case 4:
+//		cout << "You will get good mark";
+//		break;
+//	case 5:
+//		cout << "Friends will be kind";
+//		break;
+//	case 6:
+//		cout << "Friends will behave cruelly";
+//		break;
+//	case 7:
+//		cout << "YES";
+//		break;
+//	case 8:
+//		cout << "NO";
+//		break;
+//	case 9:
+//		cout << "Everything will be on time";
+//		break;
+//	case 10:
+//		cout << "Everything will be late";
+//		break;
+//	case 11:
+//		cout << "Who knows....";
+//		break;
+//	case 12:
+//		cout << "I don't know...";
+//		break;
+//	case 13:
+//		cout << "Ask universe...";
+//		break;
+//	case 14:
+//		cout << "Maybe later...";
+//		break;
+//	case 15:
+//		cout << "Tomorrow should be better...";
+//		break;
+//	case 16:
+//		cout << "Mystery...";
+//		break;
+//	case 17:
+//		cout << "I am just ball. Even magic";
+//		break;
+//	case 18:
+//		cout << "Some dreams are more reliable...";
+//		break;
+//	case 19:
+//		cout << "Try another Universe...";
+//		break;
+//	case 20:
+//		cout << "Maybe in the next life...";
+//	default:
+//			cout << "I am just ball. Even magic. Ask properly";
+//		break;
+//	}
+//	cout << "\n" << ball;
+//}
 
 //13. Пользователь указывает дату своего рождения(число и месяц).
 //Программа определяет знак зодиака пользователя и составляет для него гороскоп на ближайшую неделю.
