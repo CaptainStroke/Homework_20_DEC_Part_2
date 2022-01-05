@@ -717,24 +717,123 @@
 //11. Пользователь вводит с клавиатуры количество градусов по Цельсию,
 //которое соответствует предполагаемой температуре за окном.
 //Программа сообщает, тепло сейчас или холодно, жарко или мороз,
-//а также генерирует прогноз погоды на завтра, с указанием скорости ветра,
+//а также генерирует прогноз погоды на завтра, с указанием скорости ветра, 
+//возможных осадков и температуры воды в Чёрном море.
 
-//#include <iostream>
-//#include <ctime>
-//#include <string.h>
-//using namespace std;
-//int main()
-//{
-//	srand(time(NULL));
-//	int ball = rand()%20;
-//	cout << ball;
-//	
-//}
+#include <iostream>
+#include <ctime>
+#include <string.h>
+using namespace std;
+int main()
+{
+	int temp;
+	cin >> temp;
+	if (temp >= 30)//Day's temperature now
+	{
+		cout << "Hell Heat " << temp << "C\n";
+	}
+	else if (temp < 30 && temp >= 20)
+	{
+		cout << "Summer Hot " << temp << "C\n";
+	}
+	else if (temp < 20 && temp >= 10)
+	{
+		cout << "Warm autumn " << temp << "C\n";
+	}
+	else if (temp < 10 && temp >= 0)
+	{
+		cout << "Cool time " << temp << "C\n";
+	}
+	else if (temp < 0 && temp >= -5)
+	{
+		cout << "Frozen " << temp << "C\n";
+	}
+	else if (temp < -5 && temp >= -15)
+	{
+		cout << "Chilly cold " << temp << "C\n";
+	}
+	else if (temp < 15)
+	{
+		cout << "Anomaly frost " << temp << "C\n";
+	}
+	else
+	{
+		cout << "Wrong entry";
+	}
+	cout << "Tomorrow forecast\n";
+	srand(time(NULL));
+	int degree = rand() % 10 - 5; //day air Temperature tomorrow
+	cout << "Day temp " << temp + degree << " C\n";
+	cout << "Night temp " << temp + degree - 5 << " C\n"; //Air temperature is always lower
+	int wind = rand() % 6;
+	if (wind == 0)
+	{
+		cout << "Calm\n";
+	}
+	else if (wind == 1)
+	{
+		cout << "Lighr breeze 2-3 m/s\n";
+	}
+	else if (wind == 2)
+	{
+		cout << "Moderate wind 4-6 m/s\n";
+	}
+	else if (wind == 3)
+	{
+		cout << "Gale 7-9 m/s\n";
+	}
+	else if (wind == 4)
+	{
+		cout << "Storm 10-15 m/s\n";
+	}
+	else if (wind == 5)
+	{
+		cout << "Hurricane more than 16 m/s\n";
+	}
+	else
+	{
+		cout << "Super Blow";
+
+	}
+	int water; 
+	water = (temp + temp + degree - 5) / 2;
+	cout << "Water temperature " << water << " C \n";
+	int rain = rand() % 3;
+	if (rain == 0)
+	{
+		cout << "No precipitation \n";
+	}
+	else if (rain == 1 && temp + degree < 0 && wind >= 3)
+	{
+		cout << rain << " - Blizard\n";
+	}
+	else if (rain == 1 && temp + degree > 0 && temp + degree - 5 <= 0)// rain with snow
+	{
+		cout << rain << " - Frozen blisterin Rain\n";
+	}
+	else if (rain == 1 && temp + degree - 5 > 0)// rain in temperature above freezing point
+	{
+		cout << rain << " - Rain\n";
+	}
+	
+	else if(rain == 1 && temp + degree < 0 && wind <= 2)
+	{
+		cout << rain << " - Snow\n";
+	}
+	else if (rain == 2)
+	{
+		cout << rain << " - Haze\n";
+	}
+	else 
+	{
+	cout << rain << " - Mushroom rain\n";
+	}
+}
 
 //12. Реализовать программу «Предсказатель».Пользователь вводит вопрос.
 //Программа выдаёт случайный ответ из набора заранее предусмотренных ответов
 //(5 положительных, 5 отрицательных, 10 нейтральных вариантов).
-
+//
 //#include <iostream>
 //#include <ctime>
 //#include <string.h>
