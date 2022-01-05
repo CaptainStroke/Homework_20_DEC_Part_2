@@ -805,24 +805,24 @@ int main()
 	}
 	else if (rain == 1 && temp + degree < 0 && wind >= 3)
 	{
-		cout << rain << " - Blizard\n";
+		cout << "Blizard\n";
 	}
 	else if (rain == 1 && temp + degree > 0 && temp + degree - 5 <= 0)// rain with snow
 	{
-		cout << rain << " - Frozen blisterin Rain\n";
+		cout << "Frozen blisterin Rain\n";
 	}
 	else if (rain == 1 && temp + degree - 5 > 0)// rain in temperature above freezing point
 	{
-		cout << rain << " - Rain\n";
+		cout << "Rain\n";
 	}
 	
 	else if(rain == 1 && temp + degree < 0 && wind <= 2)
 	{
-		cout << rain << " - Snow\n";
+		cout << "Snow\n";
 	}
 	else if (rain == 2)
 	{
-		cout << rain << " - Haze\n";
+		cout << "Haze\n";
 	}
 	else 
 	{
