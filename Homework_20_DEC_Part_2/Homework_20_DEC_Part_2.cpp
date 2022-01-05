@@ -720,115 +720,115 @@
 //а также генерирует прогноз погоды на завтра, с указанием скорости ветра, 
 //возможных осадков и температуры воды в Чёрном море.
 
-#include <iostream>
-#include <ctime>
-#include <string.h>
-using namespace std;
-int main()
-{
-	int temp;
-	cin >> temp;
-	if (temp >= 30)//Day's temperature now
-	{
-		cout << "Hell Heat " << temp << "C\n";
-	}
-	else if (temp < 30 && temp >= 20)
-	{
-		cout << "Summer Hot " << temp << "C\n";
-	}
-	else if (temp < 20 && temp >= 10)
-	{
-		cout << "Warm autumn " << temp << "C\n";
-	}
-	else if (temp < 10 && temp >= 0)
-	{
-		cout << "Cool time " << temp << "C\n";
-	}
-	else if (temp < 0 && temp >= -5)
-	{
-		cout << "Frozen " << temp << "C\n";
-	}
-	else if (temp < -5 && temp >= -15)
-	{
-		cout << "Chilly cold " << temp << "C\n";
-	}
-	else if (temp < 15)
-	{
-		cout << "Anomaly frost " << temp << "C\n";
-	}
-	else
-	{
-		cout << "Wrong entry";
-	}
-	cout << "Tomorrow forecast\n";
-	srand(time(NULL));
-	int degree = rand() % 10 - 5; //day air Temperature tomorrow
-	cout << "Day temp " << temp + degree << " C\n";
-	cout << "Night temp " << temp + degree - 5 << " C\n"; //Air temperature is always lower
-	int wind = rand() % 6;
-	if (wind == 0)
-	{
-		cout << "Calm\n";
-	}
-	else if (wind == 1)
-	{
-		cout << "Lighr breeze 2-3 m/s\n";
-	}
-	else if (wind == 2)
-	{
-		cout << "Moderate wind 4-6 m/s\n";
-	}
-	else if (wind == 3)
-	{
-		cout << "Gale 7-9 m/s\n";
-	}
-	else if (wind == 4)
-	{
-		cout << "Storm 10-15 m/s\n";
-	}
-	else if (wind == 5)
-	{
-		cout << "Hurricane more than 16 m/s\n";
-	}
-	else
-	{
-		cout << "Super Blow";
-
-	}
-	int water; 
-	water = (temp + temp + degree - 5) / 2;
-	cout << "Water temperature " << water << " C \n";
-	int rain = rand() % 3;
-	if (rain == 0)
-	{
-		cout << "No precipitation \n";
-	}
-	else if (rain == 1 && temp + degree < 0 && wind >= 3)
-	{
-		cout << "Blizard\n";
-	}
-	else if (rain == 1 && temp + degree > 0 && temp + degree - 5 <= 0)// rain with snow
-	{
-		cout << "Frozen blisterin Rain\n";
-	}
-	else if (rain == 1 && temp + degree - 5 > 0)// rain in temperature above freezing point
-	{
-		cout << "Rain\n";
-	}
-	
-	else if(rain == 1 && temp + degree < 0 && wind <= 2)
-	{
-		cout << "Snow\n";
-	}
-	else if (rain == 2)
-	{
-		cout << "Haze\n";
-	}
-	else 
-	{
-	cout << rain << " - Mushroom rain\n";
-	}
-}
+//#include <iostream>
+//#include <ctime>
+//#include <string.h>
+//using namespace std;
+//int main()
+//{
+//	int temp;
+//	cin >> temp;
+//	if (temp >= 30)//Day's temperature now
+//	{
+//		cout << "Hell Heat " << temp << "C\n";
+//	}
+//	else if (temp < 30 && temp >= 20)
+//	{
+//		cout << "Summer Hot " << temp << "C\n";
+//	}
+//	else if (temp < 20 && temp >= 10)
+//	{
+//		cout << "Warm autumn " << temp << "C\n";
+//	}
+//	else if (temp < 10 && temp >= 0)
+//	{
+//		cout << "Cool time " << temp << "C\n";
+//	}
+//	else if (temp < 0 && temp >= -5)
+//	{
+//		cout << "Frozen " << temp << "C\n";
+//	}
+//	else if (temp < -5 && temp >= -15)
+//	{
+//		cout << "Chilly cold " << temp << "C\n";
+//	}
+//	else if (temp < 15)
+//	{
+//		cout << "Anomaly frost " << temp << "C\n";
+//	}
+//	else
+//	{
+//		cout << "Wrong entry";
+//	}
+//	cout << "Tomorrow forecast\n";
+//	srand(time(NULL));
+//	int degree = rand() % 10 - 5; //day air Temperature tomorrow
+//	cout << "Day temp " << temp + degree << " C\n";
+//	cout << "Night temp " << temp + degree - 5 << " C\n"; //Air temperature is always lower
+//	int wind = rand() % 6;
+//	if (wind == 0)
+//	{
+//		cout << "Calm\n";
+//	}
+//	else if (wind == 1)
+//	{
+//		cout << "Lighr breeze 2-3 m/s\n";
+//	}
+//	else if (wind == 2)
+//	{
+//		cout << "Moderate wind 4-6 m/s\n";
+//	}
+//	else if (wind == 3)
+//	{
+//		cout << "Gale 7-9 m/s\n";
+//	}
+//	else if (wind == 4)
+//	{
+//		cout << "Storm 10-15 m/s\n";
+//	}
+//	else if (wind == 5)
+//	{
+//		cout << "Hurricane more than 16 m/s\n";
+//	}
+//	else
+//	{
+//		cout << "Super Blow";
+//
+//	}
+//	int water; 
+//	water = (temp + temp + degree - 5) / 2;
+//	cout << "Water temperature " << water << " C \n";
+//	int rain = rand() % 3;
+//	if (rain == 0)
+//	{
+//		cout << "No precipitation \n";
+//	}
+//	else if (rain == 1 && temp + degree < 0 && wind >= 3)
+//	{
+//		cout << "Blizard\n";
+//	}
+//	else if (rain == 1 && temp + degree > 0 && temp + degree - 5 <= 0)// rain with snow
+//	{
+//		cout << "Frozen blisterin Rain\n";
+//	}
+//	else if (rain == 1 && temp + degree - 5 > 0)// rain in temperature above freezing point
+//	{
+//		cout << "Rain\n";
+//	}
+//	
+//	else if(rain == 1 && temp + degree < 0 && wind <= 2)
+//	{
+//		cout << "Snow\n";
+//	}
+//	else if (rain == 2)
+//	{
+//		cout << "Haze\n";
+//	}
+//	else 
+//	{
+//	cout << rain << " - Mushroom rain\n";
+//	}
+//}
 
 //12. Реализовать программу «Предсказатель».Пользователь вводит вопрос.
 //Программа выдаёт случайный ответ из набора заранее предусмотренных ответов
@@ -914,10 +914,49 @@ int main()
 
 //13. Пользователь указывает дату своего рождения(число и месяц).
 //Программа определяет знак зодиака пользователя и составляет для него гороскоп на ближайшую неделю.
-
+ 
+//#include <iostream>
+//#include <stralign.h>
+//#include <ctime>
+//using namespace std;
+//int main()
+//{
+//
+//}
 //14. Валера купил N куриц по M гривен за одну курицу.Каждая курица несёт по X яиц в неделю.
 //Валера решил открыть свой бизнес и стал продавать яйца, которые несут курицы.
 //За сколько дней окупятся куры, если продавать яйца по Z гривен за десяток
 //(с учётом НДС, но без учёта сбора в ПФ)?
 //Сроком жизни куриц, влажностью воздуха в курятнике, 
 //а также скоростью ветра и фазами луны можно пренебречь.
+
+#include <iostream>
+#include <string.h>
+#include <ctime>
+using namespace std;
+int main()
+{
+	cout.setf(ios::fixed);
+	cout.precision(2);
+	int hen;   //Expence
+	double hen_price;	//Expense
+	int egg;	//Profit
+	double egg_price;	//Profit
+	cout << "How many hens did Valera buy? - ";
+	cin >> hen;
+	cout << " birds\n";
+	cout << "What is the price per chicken? - ";
+	cin >> hen_price;
+	cout << " grivnas\n";
+	cout << "How many eggs one hen can lay per week?\n";
+	cin >> egg;
+	cout << "How much ten eggs cost?";
+	cin >> egg_price;
+	float earn;// earn per day
+	earn = (double)((egg * hen * egg_price) / (7 * 10));
+	cout << "\n" << earn << " Hryvnas earnings per day\n";
+	float days;
+	days = (hen * hen_price) * (7 * 10) / ((egg * hen * egg_price) * (0.8));
+	cout.precision(0);
+	cout <<"\n" << ceil(days) << " days to return investment\n";
+}
