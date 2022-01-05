@@ -915,14 +915,130 @@
 //13. Пользователь указывает дату своего рождения(число и месяц).
 //Программа определяет знак зодиака пользователя и составляет для него гороскоп на ближайшую неделю.
  
-//#include <iostream>
-//#include <stralign.h>
-//#include <ctime>
-//using namespace std;
-//int main()
-//{
-//
-//}
+#include <iostream>
+#include <string.h>
+#include <ctime>
+using namespace std;
+int main()
+{
+	int date;
+	cin >> date;
+	int month;
+	cin >> month;
+	
+	if (month == 3 && date >= 21 && date <= 31 || month == 4 && date >= 1 && date <= 19)
+	{
+		cout << "Aries";
+	}
+	else if (month == 4 && date >= 20 && date <= 30 || month == 5 && date >= 1 && date <= 20)
+	{
+		cout << "Taurus";
+	}
+	else if (month == 4 && date >= 20 && date <= 31 || month == 5 && date >= 1 && date <= 20)
+	{
+		cout << "Gemini";
+	}
+	else if (month == 6 && date >= 21 && date <= 31 || month == 7 && date >= 1 && date <= 22)
+	{
+		cout << "Cancer";
+	}
+	else if (month == 7 && date >= 23 && date <= 30 || month == 8 && date >= 1 && date <= 22)
+	{
+		cout << "Leo";
+	}
+	else if (month == 8 && date >= 23 && date <= 31 || month == 9 && date >= 1 && date <= 22)
+	{
+		cout << "Virgo";
+	}
+	else if (month == 9 && date >= 23 && date <= 30 || month == 10 && date >= 1 && date <= 22)
+	{
+		cout << "Libra";
+	}
+	else if (month == 10 && date >= 23 && date <= 31 || month == 11 && date >= 1 && date <= 21)
+	{
+		cout << "Scorpio";
+	}
+	else if (month == 11 && date >= 22 && date <= 30 || month == 12 && date >= 1 && date <= 21)
+	{
+		cout << "Sagitarius";
+	}
+	else if (month == 12 && date >= 22 && date <= 31 || month == 1 && date >= 1 && date <= 19)
+	{
+		cout << "Capricornus";
+	}
+	else if (month == 1 && date >= 20 && date <= 31 || month == 2 && date >= 1 && date <= 18)
+	{
+		cout << "Aquarius";
+	}
+	else if (month == 2 && date >= 19 && date <= 28 || month == 3 && date >= 1 && date <= 20)
+	{
+		cout << "Pisces";
+	}
+	else if (month == 2 && date == 29)
+	{
+		cout << "Pisces leap year";
+	}
+	else
+	{
+		cout << "Something was wrong";
+	}
+	/*if (date <= 31 && date >= 1 && month == 1 && month == 3 && month == 5 && month == 7 && month == 8 && month == 10 && month == 12)
+	{
+		cout << date << " ";
+	}
+	else if (date <= 30 && date >= 1 && month == 4 && month == 6 && month == 9 && month == 11)
+	{
+		cout << date << " ";
+	}
+	else if (date <= 29 && date >= 1 && month == 2)
+	{
+		cout << date << " ";
+	}
+	
+	switch (month)
+		{
+		    case 1:
+				cout << "January";
+				break;
+			case 2:
+				cout << "February";
+				break;
+			case 3:
+				cout << "March";
+				break;
+			case 4:
+				cout << "April";
+				break;
+			case 5:
+				cout << "May";
+				break;
+			case 6:
+				cout << "June";
+				break;
+			case 7:
+				cout << "July";
+				break;
+			case 8:
+				cout << "August";
+				break;
+			case 9:
+				cout << "September";
+				break;
+			case 10:
+				cout << "October";
+				break;
+			case 11:
+				cout << "November";
+				break;
+			case 12:
+				cout << "December";
+					break;
+			default:
+				cout << "Try somethng right";
+				break;
+			}*/
+	
+}
 
 //14. Валера купил N куриц по M гривен за одну курицу.Каждая курица несёт по X яиц в неделю.
 //Валера решил открыть свой бизнес и стал продавать яйца, которые несут курицы.
