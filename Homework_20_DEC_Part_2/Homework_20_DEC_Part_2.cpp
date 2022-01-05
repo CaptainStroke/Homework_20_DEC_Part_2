@@ -923,6 +923,7 @@
 //{
 //
 //}
+
 //14. Валера купил N куриц по M гривен за одну курицу.Каждая курица несёт по X яиц в неделю.
 //Валера решил открыть свой бизнес и стал продавать яйца, которые несут курицы.
 //За сколько дней окупятся куры, если продавать яйца по Z гривен за десяток
@@ -930,43 +931,43 @@
 //Сроком жизни куриц, влажностью воздуха в курятнике, 
 //а также скоростью ветра и фазами луны можно пренебречь.
 
-#include <iostream>
-#include <string.h>
-#include <ctime>
-using namespace std;
-int main()
-{
-	cout.setf(ios::fixed);
-	cout.precision(2);
-	float hen;   //Expence
-	float hen_price;	//Expense
-	float egg;	//Profit
-	float egg_price;	//Profit
-	cout << "How many hens did Valera buy? - ";
-	cin >> hen;
-	if (hen - (int)hen != 0)
-	{
-		cout << "Valera shoud know that hens must be whole to live";
-		return 0;
-	}
-	cout << " birds\n";
-	cout << "What is the price per chicken? - ";
-	cin >> hen_price;
-	cout << " grivnas\n";
-	cout << "How many eggs one hen can lay per week?\n";
-	cin >> egg;
-	if (egg > 7 || egg - (int)egg !=0)
-	{
-		cout << "Valera shoud know that hens can not lay that much or parts of egg";
-		return 0;
-	}
-	cout << "How much ten eggs cost?";
-	cin >> egg_price;
-	float earn;// earn per day
-	earn = (double)((egg * hen * egg_price) / (7 * 10));
-	cout << "\n" << earn << " Hryvnas per day\n";
-	float days;
-	days = (hen * hen_price) * (7 * 10) / ((egg * hen * egg_price) * (0.8));
-	cout.precision(0);
-	cout <<"\n" << ceil(days) << " days to return investment\n";
-}
+//#include <iostream>
+//#include <string.h>
+//#include <ctime>
+//using namespace std;
+//int main()
+//{
+//	cout.setf(ios::fixed);
+//	cout.precision(2);
+//	float hen;   //Expence
+//	float hen_price;	//Expense
+//	float egg;	//Profit
+//	float egg_price;	//Profit
+//	cout << "How many hens did Valera buy? - ";
+//	cin >> hen;
+//	if (hen - (int)hen != 0)
+//	{
+//		cout << "Valera shoud know that hens must be whole to live";
+//		return 0;
+//	}
+//	cout << " birds\n";
+//	cout << "What is the price per chicken? - ";
+//	cin >> hen_price;
+//	cout << " grivnas\n";
+//	cout << "How many eggs one hen can lay per week?\n";
+//	cin >> egg;
+//	if (egg > 7 || egg - (int)egg !=0)
+//	{
+//		cout << "Valera shoud know that hens can not lay that much or parts of egg";
+//		return 0;
+//	}
+//	cout << "How much ten eggs cost?";
+//	cin >> egg_price;
+//	float earn;// earn per day
+//	earn = (double)((egg * hen * egg_price) / (7 * 10));
+//	cout << "\n" << earn << " Hryvnas per day\n";
+//	float days;
+//	days = (hen * hen_price) * (7 * 10) / ((egg * hen * egg_price) * (0.8));
+//	cout.precision(0);
+//	cout <<"\n" << ceil(days) << " days to return investment\n";
+//}
