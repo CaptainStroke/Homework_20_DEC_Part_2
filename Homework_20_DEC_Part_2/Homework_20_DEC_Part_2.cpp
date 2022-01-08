@@ -26,7 +26,7 @@
 //	float a;
 //	cin >> a;
 //	a -=(int)a;
-//	(a == 0) ? (cout << "Ineger type") : (cout << "Real number with decimal part");	
+//	(a == 0) ? (cout << "Integer type") : (cout << "Real number with decimal part");	
 //}
 
 //3. Написать программу, которая предлагает пользователю ввести номер дня недели, 
@@ -120,14 +120,47 @@
 //4. Указать с клавиатуры текущее время(количество часов, минут, секунд).
 //Проверить корректность введённых значений.
 
-//#include <iostream>
-//#include <string.h>
-//using namespace std;
-//int main()
-//{
-//
-//}
-// 
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << "Enter time correctly. Hour, minute and second. \n";
+	int hour;
+	int min;
+	int sec;
+	cin >> hour;
+	if (hour < 24 && hour >= 0)
+	{
+		cout << " Hours\n";
+	}
+	else
+	{
+		cout << "Wrong entry. We should stop already";
+		return 0;
+	}
+	cin >> min;
+	if (min < 60 && min >= 0)
+	{
+		cout << " Minute\n";
+	}
+	else
+	{
+		cout << "Wrong entry. We should stop already";
+		return 0;
+	}
+	cin >> sec;
+	if (sec <= 59 && sec >= 0)
+	{
+		cout << " Seconds\n";
+		cout << "\n" << "HH" << " MM " << "SS\n";
+		cout << hour << ":" << min << ":" << sec;
+	}
+	else
+	{
+		cout << "Wrong entry. We were close, but wrong";
+	}
+}
+ 
 //5. Ввести с клавиатуры шестизначный номер трамвайного(троллейбусного) билета, 
 //и определить является ли он счастливым(совпадают суммы трёх первых и трёх последних цифр билета).
 
@@ -707,7 +740,7 @@
 //	}
 //	else
 //	{
-//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\n But is Game Over " << name << "\n";
+//		cout << "Your answer is wrong. There was ONLY one correct answer could let you play.\nBut is Game Over " << name << "\n";
 //		return 0;
 //	}
 //	cout << "You are new Millionair. Congrats!/n";
@@ -914,7 +947,7 @@
 
 //13. Пользователь указывает дату своего рождения(число и месяц).
 //Программа определяет знак зодиака пользователя и составляет для него гороскоп на ближайшую неделю.
- 
+ /*
 #include <iostream>
 #include <string.h>
 #include <ctime>
@@ -999,7 +1032,7 @@ int main()
 	cout << "Money are falling on " << zodiac << " from the sky.\n";
 	cout << "Knowledge is coming from every direction of Universe to " << zodiac << ".\n";
 
-	}
+	}*/
 
 //14. Валера купил N куриц по M гривен за одну курицу.Каждая курица несёт по X яиц в неделю.
 //Валера решил открыть свой бизнес и стал продавать яйца, которые несут курицы.
